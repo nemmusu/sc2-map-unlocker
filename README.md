@@ -8,7 +8,7 @@
 - [Readme](#readme)
 - [Stronghold Crusader 2 Map Unlocker](#stronghold-crusader-2-map-unlocker)
 - [Executable](#executable)
-- [To use the script, install PyQt5 using pip](#to-use-the-script-install-pyqt5-using-pip)
+- [Installation of PyQt5 and usage of the script](#installation-of-pyqt5-and-usage-of-the-script)
 - [Compilation](#compilation)
 - [Screenshot](#screenshot)
 
@@ -28,7 +28,7 @@ Once the operation is completed, a confirmation message will be displayed.
 
 In the `build` folder, there is a zip file that contains an executable version of the program (already compiled and ready to use).
 
-# To use the script, install PyQt5 using pip
+# Installation of PyQt5 and usage of the script
 
 You can run the following command in your terminal:
 
