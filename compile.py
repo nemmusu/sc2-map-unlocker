@@ -2,7 +2,7 @@ import sys
 from cx_Freeze import setup, Executable
 
 build_exe_options = {
-    'packages': ['os', 'zipfile', 'PyQt5.QtWidgets', 'PyQt5.QtGui'],
+    'packages': ['os', 'zipfile', 'PyQt5.QtWidgets', 'PyQt5.QtGui', 're'],
     'include_files': [],
     'excludes': [],
     'include_msvcr': True

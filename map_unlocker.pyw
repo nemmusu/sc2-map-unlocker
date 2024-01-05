@@ -3,12 +3,13 @@ import os
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QWidget, QMessageBox, QFileDialog, QLineEdit
 from PyQt5 import QtCore, QtGui
 import zipfile
+import re
 
 class StrongholdCrusaderEditorUnlocker(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Stronghold Crusader 2 Map Unlocker")
+        self.setWindowTitle("Stronghold Crusader 2 Editor Unlocker")
         self.setGeometry(100, 100, 300, 150)  # Modifica le dimensioni della finestra
 
         self.central_widget = QWidget()
@@ -50,14 +51,19 @@ class StrongholdCrusaderEditorUnlocker(QMainWindow):
                 with zipfile.ZipFile(file_name, 'r') as original_archive:
                     for file_name in original_archive.namelist():
                         with original_archive.open(file_name) as original_file:
+                            content = original_file.read().decode('latin-1')
+
                             if 'editor.ed' in file_name.lower():
-                                content = original_file.read().decode('latin-1')
                                 modified_content = content.replace("<MapLocked>true</MapLocked>", "<MapLocked>false</MapLocked>")
-                                content_name = modified_content.split("""<SceneName id="ref-4">""")[1].split("</")[0]
-                                modified_content = modified_content.replace(content_name, save_name)
-                                modified_archive.writestr(file_name, modified_content.encode('latin-1'))
+                                #content_name = modified_content.split("""<SceneName id="ref-4">""")[1].split("</")[0]
+                                #modified_content = modified_content.replace(content_name, save_name)
+                            elif 'briefing_text.dat' in file_name.lower():
+                                regex_pattern = r'\$[\w\s]+'
+                                modified_content = re.sub(regex_pattern, f'${save_name.replace(" ", "_")}', content)
                             else:
-                                modified_archive.writestr(file_name, original_file.read())
+                                modified_content = content
+
+                            modified_archive.writestr(file_name, modified_content.encode('latin-1'))
 
             QMessageBox.information(self, "Operazione completata", "Sblocco riuscito! Il file modificato è stato salvato.")
 
