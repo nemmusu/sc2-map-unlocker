@@ -45,27 +45,28 @@ class StrongholdCrusaderEditorUnlocker(QMainWindow):
                 QMessageBox.warning(self, "Nome del file mancante", "Inserisci un nome per la mappa.")
                 return
 
-            modified_file_name = os.path.join("./", f"{save_name}-unlocked.shmap")  # Utilizza il nome fornito dall'utente
+            save_path, _ = QFileDialog.getSaveFileName(self, "Salva come", f"{save_name}-unlocked.shmap", "File .shmap (*.shmap)")
 
-            with zipfile.ZipFile(modified_file_name, 'w', compression=zipfile.ZIP_DEFLATED) as modified_archive:
-                with zipfile.ZipFile(file_name, 'r') as original_archive:
-                    for file_name in original_archive.namelist():
-                        with original_archive.open(file_name) as original_file:
-                            content = original_file.read().decode('latin-1')
+            if save_path:
+                with zipfile.ZipFile(save_path, 'w', compression=zipfile.ZIP_DEFLATED) as modified_archive:
+                    with zipfile.ZipFile(file_name, 'r') as original_archive:
+                        for file_name in original_archive.namelist():
+                            with original_archive.open(file_name) as original_file:
+                                content = original_file.read().decode('latin-1')
 
-                            if 'editor.ed' in file_name.lower():
-                                modified_content = content.replace("<MapLocked>true</MapLocked>", "<MapLocked>false</MapLocked>")
-                                #content_name = modified_content.split("""<SceneName id="ref-4">""")[1].split("</")[0]
-                                #modified_content = modified_content.replace(content_name, save_name)
-                            elif 'briefing_text.dat' in file_name.lower():
-                                regex_pattern = r'\$[\w\s]+'
-                                modified_content = re.sub(regex_pattern, f'${save_name.replace(" ", "_")}', content)
-                            else:
-                                modified_content = content
+                                if 'editor.ed' in file_name.lower():
+                                    modified_content = content.replace("<MapLocked>true</MapLocked>", "<MapLocked>false</MapLocked>")
+                                    #content_name = modified_content.split("""<SceneName id="ref-4">""")[1].split("</")[0]
+                                    #modified_content = modified_content.replace(content_name, save_name)
+                                elif 'briefing_text.dat' in file_name.lower():
+                                    regex_pattern = r'\$[\w\s]+'
+                                    modified_content = re.sub(regex_pattern, f'${save_name.replace(" ", "_")}', content)
+                                else:
+                                    modified_content = content
 
-                            modified_archive.writestr(file_name, modified_content.encode('latin-1'))
+                                modified_archive.writestr(file_name, modified_content.encode('latin-1'))
 
-            QMessageBox.information(self, "Operazione completata", "Sblocco riuscito! Il file modificato è stato salvato.")
+                QMessageBox.information(self, "Operazione completata", "Sblocco riuscito! Il file modificato è stato salvato.")
 
 def run_gui():
     app = QApplication(sys.argv)
