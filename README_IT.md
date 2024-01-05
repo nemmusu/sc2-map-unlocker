@@ -2,7 +2,7 @@
 [README: Italiano](./README_IT.md)
 
 [README: English](./README.md)
-# Stronghold Crusader 2 Editor Unlocker
+# Stronghold Crusader 2 Map Unlocker
 
 Questo è un semplice programma che consente di sbloccare le mappe originali di Stronghold Crusader 2 in modo che possano essere modificate dall'editor di mappe.
 

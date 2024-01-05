@@ -8,7 +8,7 @@ class StrongholdCrusaderEditorUnlocker(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Stronghold Crusader 2 Editor Unlocker")
+        self.setWindowTitle("Stronghold Crusader 2 Map Unlocker")
         self.setGeometry(100, 100, 300, 150)  # Modifica le dimensioni della finestra
 
         self.central_widget = QWidget()
