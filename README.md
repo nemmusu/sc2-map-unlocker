@@ -2,6 +2,16 @@
 [README: Italian](./README_IT.md)
 
 [README: English](./README.md)
+
+# Table of contents
+
+- [Readme](#readme)
+- [Stronghold Crusader 2 Map Unlocker](#stronghold-crusader-2-map-unlocker)
+- [Executable](#executable)
+- [To use the script, install PyQt5 using pip](#to-use-the-script-install-pyqt5-using-pip)
+- [Compilation](#compilation)
+- [Screenshot](#screenshot)
+
 # Stronghold Crusader 2 Map Unlocker
 
 This is a simple program that allows you to unlock the original maps of Stronghold Crusader 2 so that they can be edited in the map editor.
