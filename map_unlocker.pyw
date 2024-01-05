@@ -1,6 +1,6 @@
 import sys
 import os
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QWidget, QMessageBox, QFileDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QWidget, QMessageBox, QFileDialog, QLineEdit
 import zipfile
 
 class StrongholdCrusaderEditorUnlocker(QMainWindow):
@@ -8,7 +8,7 @@ class StrongholdCrusaderEditorUnlocker(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Stronghold Crusader 2 Editor Unlocker")
-        self.setGeometry(100, 100, 200, 80)
+        self.setGeometry(100, 100, 250, 120)
 
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
@@ -17,6 +17,12 @@ class StrongholdCrusaderEditorUnlocker(QMainWindow):
 
         self.info_label = QLabel("Questo programma sblocca le mappe originali\ndi Stronghold Crusader 2 in modo che \npossano essere modificate dal map editor")
         self.layout.addWidget(self.info_label)
+
+        self.name_label = QLabel("Nome della mappa:")
+        self.layout.addWidget(self.name_label)
+
+        self.name_input = QLineEdit()
+        self.layout.addWidget(self.name_input)
 
         self.unlock_button = QPushButton("Sblocca Mappe")
         self.unlock_button.setFixedSize(100, 30)
@@ -29,18 +35,25 @@ class StrongholdCrusaderEditorUnlocker(QMainWindow):
         file_name, _ = QFileDialog.getOpenFileName(self, "Seleziona il file .shmap", "", "File .shmap (*.shmap)")
 
         if file_name:
-            modified_file_name = os.path.join("./", f"{os.path.splitext(os.path.basename(file_name))[0]}-unlocked.shmap")
+            save_name = self.name_input.text()  # Ottiene il testo dalla casella di testo
+            if not save_name:
+                QMessageBox.warning(self, "Nome del file mancante", "Inserisci un nome per la mappa.")
+                return
+
+            modified_file_name = os.path.join("./", f"{save_name}-unlocked.shmap")  # Utilizza il nome fornito dall'utente
 
             with zipfile.ZipFile(modified_file_name, 'w', compression=zipfile.ZIP_DEFLATED) as modified_archive:
                 with zipfile.ZipFile(file_name, 'r') as original_archive:
                     for file_name in original_archive.namelist():
                         with original_archive.open(file_name) as original_file:
-                            if 'editor.ed' in file_name.lower():  # Cerca il file "editor.ed" nell'archivio zip
+                            if 'editor.ed' in file_name.lower():
                                 content = original_file.read().decode('latin-1')
                                 modified_content = content.replace("<MapLocked>true</MapLocked>", "<MapLocked>false</MapLocked>")
+                                content_name = modified_content.split("""<SceneName id="ref-4">""")[1].split("</")[0]
+                                modified_content = modified_content.replace(content_name, save_name)
                                 modified_archive.writestr(file_name, modified_content.encode('latin-1'))
                             else:
-                                modified_archive.writestr(file_name, original_file.read())  # Scrive gli altri file senza modifiche
+                                modified_archive.writestr(file_name, original_file.read())
 
             QMessageBox.information(self, "Operazione completata", "Sblocco riuscito! Il file modificato è stato salvato.")
 
