@@ -15,7 +15,7 @@ class StrongholdCrusaderEditorUnlocker(QMainWindow):
 
         self.layout = QVBoxLayout()
 
-        self.info_label = QLabel("Questo programma sblocca le mappe originali\n di Stronghold Crusader 2 in modo che \npossano essere modificate dal map editor")
+        self.info_label = QLabel("Questo programma sblocca le mappe originali\ndi Stronghold Crusader 2 in modo che \npossano essere modificate dal map editor")
         self.layout.addWidget(self.info_label)
 
         self.unlock_button = QPushButton("Sblocca Mappe")
