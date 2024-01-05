@@ -18,7 +18,7 @@ Once the operation is completed, a confirmation message will be displayed.
 
 In the `build` folder, there is a zip file that contains an executable version of the program (already compiled and ready to use).
 
-## To use the script, install PyQt5 using pip
+# To use the script, install PyQt5 using pip
 
 You can run the following command in your terminal:
 

@@ -18,7 +18,7 @@ Una volta completata l'operazione, verrà visualizzato un messaggio di conferma.
 
 Nella cartella `build` è presente un file zip che contiene una versione eseguibile del programma (già compilata e pronta all uso).
 
-## Per utilizzare lo script installare PyQt5 utilizzando pip
+# Per utilizzare lo script installare PyQt5 utilizzando pip
 Puoi eseguire il seguente comando nel tuo terminale:
 
 ```
