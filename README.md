@@ -14,7 +14,9 @@ Once the program is launched, to unlock a map, click on the "Unlock Maps" button
 
 Once the operation is completed, a confirmation message will be displayed.
 
-## To use the script, install PyQt5 using pip, you can run the following command in your terminal:
+## To use the script, install PyQt5 using pip
+
+You can run the following command in your terminal:
 
 ```
 pip install pyqt5

@@ -14,7 +14,8 @@ Una volta avviato il programma, per sbloccare una mappa, fare clic sul pulsante 
 
 Una volta completata l'operazione, verrà visualizzato un messaggio di conferma.
 
-## Per utilizzare lo script installare PyQt5 utilizzando pip, puoi eseguire il seguente comando nel tuo terminale:
+## Per utilizzare lo script installare PyQt5 utilizzando pip
+Puoi eseguire il seguente comando nel tuo terminale:
 
 ```
 pip install pyqt5
