@@ -33,3 +33,7 @@ python map_unlocker.pyw
 ```
 
 Lo script aprirà una finestra con l'interfaccia grafica del programma Stronghold Crusader 2 Editor Unlocker. Puoi quindi utilizzare il programma per sbloccare le mappe come descritto nella descrizione sopra.
+
+# Screenshot
+
+![SC2 Map Unlocker](https://github.com/nemmusu/sc2-map-unlocker/blob/main/screenshots/interface_example.png)
