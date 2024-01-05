@@ -1,31 +1,36 @@
+# Readme
+[README: Italiano](./README_IT.md)
+
+[README: English](./README.md)
+
 # Stronghold Crusader 2 Editor Unlocker
 
-Questo è un semplice programma che consente di sbloccare le mappe originali di Stronghold Crusader 2 in modo che possano essere modificate dall'editor di mappe.
+This is a simple program that allows you to unlock the original maps of Stronghold Crusader 2 so that they can be modified using the map editor.
 
-Il programma è stato creato utilizzando il linguaggio di programmazione Python e la libreria PyQt5 per l'interfaccia grafica.
+The program was created using the Python programming language and the PyQt5 library for the graphical interface.
 
-Per utilizzare il programma, è necessario eseguire il file unlocker.exe incluso nell'archivio `stronghold_map_unlocker.zip`. Per creare questo file .exe, è stato utilizzato il comando `python compile.py build` (il file `compile.py` è presente nel repository).
+To use the program, you need to run the unlocker.exe file included in the stronghold_map_unlocker.zip archive. To create this .exe file, the command `python compile.py build` was used (the compile.py file is present in the repository).
 
-Una volta avviato il programma, per sbloccare una mappa, fare clic sul pulsante "Sblocca Mappe". Verrà richiesto di selezionare il file .shmap da sbloccare. Una volta selezionato il file, verrà creato un nuovo file con estensione "-unlocked.shmap" (nella cartella in cui verrà eseguito il programma) che conterrà la mappa sbloccata.
+Once the program is launched, to unlock a map, click on the "Unlock Maps" button. You will be prompted to select the .shmap file to unlock. Once the file is selected, a new file with the extension "-unlocked.shmap" will be created (in the folder where the program is run) and it will contain the unlocked map.
 
-Una volta completata l'operazione, verrà visualizzato un messaggio di conferma.
+Once the operation is complete, a confirmation message will be displayed.
 
-## Per utilizzare lo script installare PyQt5 utilizzando pip, puoi eseguire il seguente comando nel tuo terminale:
+## To use the script, install PyQt5 using pip, you can run the following command in your terminal:
 
 ```
 pip install pyqt5
 ```
 
-Per avviare lo script `map_unlocker.pyw`, segui questi passaggi:
+To start the script map_unlocker.pyw, follow these steps:
 
-1. Assicurati di aver installato PyQt5 come descritto sopra.
+1. Make sure you have installed PyQt5 as described above.
 
-2. Apri il tuo terminale e spostati nella directory in cui si trova il file `map_unlocker.pyw`.
+2. Open your terminal and navigate to the directory where the map_unlocker.pyw file is located.
 
-3. Esegui il comando seguente per avviare lo script:
+3. Run the following command to start the script:
 
 ```
 python map_unlocker.pyw
 ```
 
-Lo script aprirà una finestra con l'interfaccia grafica del programma Stronghold Crusader 2 Editor Unlocker. Puoi quindi utilizzare il programma per sbloccare le mappe come descritto nella descrizione sopra.
+The script will open a window with the graphical interface of the Stronghold Crusader 2 Editor Unlocker program. You can then use the program to unlock maps as described in the description above.
