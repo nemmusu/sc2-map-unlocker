@@ -1,6 +1,7 @@
 import sys
 import os
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QWidget, QMessageBox, QFileDialog, QLineEdit
+from PyQt5 import QtCore, QtGui
 import zipfile
 
 class StrongholdCrusaderEditorUnlocker(QMainWindow):
@@ -8,14 +9,17 @@ class StrongholdCrusaderEditorUnlocker(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Stronghold Crusader 2 Editor Unlocker")
-        self.setGeometry(100, 100, 250, 120)
+        self.setGeometry(100, 100, 300, 150)  # Modifica le dimensioni della finestra
 
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
         self.layout = QVBoxLayout()
 
-        self.info_label = QLabel("Questo programma sblocca le mappe originali\ndi Stronghold Crusader 2 in modo che \npossano essere modificate dal map editor")
+        self.info_label = QLabel("Questo programma sblocca le mappe originali di Stronghold Crusader 2 in modo che possano essere modificate dal map editor")
+        self.info_label.setStyleSheet("font-size: 10px; border: 1px solid gray;")
+        self.info_label.setWordWrap(True)
+        self.info_label.setAlignment(QtCore.Qt.AlignCenter)
         self.layout.addWidget(self.info_label)
 
         self.name_label = QLabel("Nome della mappa:")
