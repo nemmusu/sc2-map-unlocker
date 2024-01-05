@@ -10,7 +10,7 @@ The program was created using the Python programming language and the PyQt5 libr
 
 To use the program, you need to run the unlocker.exe file included in the stronghold_map_unlocker.zip archive. To create this .exe file, the command `python compile.py build` was used (the compile.py file is present in the repository).
 
-Once the program is launched, to unlock a map, click on the "Unlock Maps" button. You will be prompted to select the .shmap file to unlock. Once the file is selected, a new file with the extension "-unlocked.shmap" will be created (in the folder where the program is executed) which will contain the unlocked map.
+Once the program is launched, to unlock a map, click on the "Unlock Maps" button. You will be prompted to select the .shmap file to unlock. Once the file is selected, a new file with the extension "-unlocked.shmap" will be created, containing the unlocked map. You will be asked where to save the file. The map will be named after the file and you will be able to modify the description from the map editor.
 
 Once the operation is completed, a confirmation message will be displayed.
 

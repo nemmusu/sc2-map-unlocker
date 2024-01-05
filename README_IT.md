@@ -10,7 +10,7 @@ Il programma è stato creato utilizzando il linguaggio di programmazione Python 
 
 Per utilizzare il programma, è necessario eseguire il file unlocker.exe incluso nell'archivio `stronghold_map_unlocker.zip`. Per creare questo file .exe, è stato utilizzato il comando `python compile.py build` (il file `compile.py` è presente nel repository).
 
-Una volta avviato il programma, per sbloccare una mappa, fare clic sul pulsante "Sblocca Mappe". Verrà richiesto di selezionare il file .shmap da sbloccare. Una volta selezionato il file, verrà creato un nuovo file con estensione "-unlocked.shmap" (nella cartella in cui verrà eseguito il programma) che conterrà la mappa sbloccata.
+Una volta avviato il programma, per sbloccare una mappa, fare clic sul pulsante "Sblocca Mappe". Verrà richiesto di selezionare il file .shmap da sbloccare. Una volta selezionato il file, verrà creato un nuovo file con estensione "-unlocked.shmap" che conterrà la mappa sbloccata, verrà chiesto dove salvare il file.La mappa si chiamerà con il nome del file e sarà possibile modificare la descrizione dal map editor.
 
 Una volta completata l'operazione, verrà visualizzato un messaggio di conferma.
 
