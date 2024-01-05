@@ -56,6 +56,10 @@ This command will use cx_Freeze to create the program's executable. The executab
 
 Once the executable creation is complete, you can run it simply by double-clicking the unlocker.exe file.
 
+# Executable
+
+In the `build` folder, there is a zip file that contains an executable version of the program (already compiled and ready to use).
+
 # Screenshot
 
 ![SC2 Map Unlocker](https://github.com/nemmusu/sc2-map-unlocker/blob/main/screenshots/interface_example.png)

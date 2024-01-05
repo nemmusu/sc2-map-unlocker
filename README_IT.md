@@ -55,6 +55,12 @@ Questo comando utilizzerà cx_Freeze per creare l'eseguibile del programma. L'es
 
 Una volta completata la creazione dell'eseguibile, puoi eseguirlo semplicemente facendo doppio clic sul file `unlocker.exe`.
 
+# Eseguibile
+
+Nella cartella `build` è presente un file zip che contiene una versione eseguibile del programma (già compilata e pronta all uso).
+
 # Screenshot
 
 ![SC2 Map Unlocker](https://github.com/nemmusu/sc2-map-unlocker/blob/main/screenshots/interface_example.png)
+
+
