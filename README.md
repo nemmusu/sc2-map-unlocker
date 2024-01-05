@@ -1,19 +1,18 @@
 # Readme
-[README: Italiano](./README_IT.md)
+[README: Italian](./README_IT.md)
 
 [README: English](./README.md)
-
 # Stronghold Crusader 2 Editor Unlocker
 
-This is a simple program that allows you to unlock the original maps of Stronghold Crusader 2 so that they can be modified using the map editor.
+This is a simple program that allows you to unlock the original maps of Stronghold Crusader 2 so that they can be edited in the map editor.
 
 The program was created using the Python programming language and the PyQt5 library for the graphical interface.
 
 To use the program, you need to run the unlocker.exe file included in the stronghold_map_unlocker.zip archive. To create this .exe file, the command `python compile.py build` was used (the compile.py file is present in the repository).
 
-Once the program is launched, to unlock a map, click on the "Unlock Maps" button. You will be prompted to select the .shmap file to unlock. Once the file is selected, a new file with the extension "-unlocked.shmap" will be created (in the folder where the program is run) and it will contain the unlocked map.
+Once the program is launched, to unlock a map, click on the "Unlock Maps" button. You will be prompted to select the .shmap file to unlock. Once the file is selected, a new file with the extension "-unlocked.shmap" will be created (in the folder where the program is executed) which will contain the unlocked map.
 
-Once the operation is complete, a confirmation message will be displayed.
+Once the operation is completed, a confirmation message will be displayed.
 
 ## To use the script, install PyQt5 using pip, you can run the following command in your terminal:
 
@@ -21,7 +20,7 @@ Once the operation is complete, a confirmation message will be displayed.
 pip install pyqt5
 ```
 
-To start the script map_unlocker.pyw, follow these steps:
+To start the map_unlocker.pyw script, follow these steps:
 
 1. Make sure you have installed PyQt5 as described above.
 
@@ -34,6 +33,26 @@ python map_unlocker.pyw
 ```
 
 The script will open a window with the graphical interface of the Stronghold Crusader 2 Editor Unlocker program. You can then use the program to unlock maps as described in the description above.
+
+# Compilation
+To create the executable of the Stronghold Crusader 2 Editor Unlocker program, you need to use cx_Freeze, a Python module that allows you to create executable packages from Python scripts.
+
+First, you need to install cx_Freeze using pip. You can run the following command in your terminal:
+
+```
+pip install cx_Freeze
+```
+
+Once cx_Freeze is installed, you can proceed with creating the program's executable.
+Run the following command to create the executable:
+
+```
+python compile.py build
+```
+
+This command will use cx_Freeze to create the program's executable. The executable will be created in the `build` directory inside the current directory.
+
+Once the executable creation is complete, you can run it simply by double-clicking the unlocker.exe file.
 
 # Screenshot
 

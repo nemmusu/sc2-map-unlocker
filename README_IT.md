@@ -34,6 +34,26 @@ python map_unlocker.pyw
 
 Lo script aprirà una finestra con l'interfaccia grafica del programma Stronghold Crusader 2 Editor Unlocker. Puoi quindi utilizzare il programma per sbloccare le mappe come descritto nella descrizione sopra.
 
+# Compilazione
+Per creare l'eseguibile del programma Stronghold Crusader 2 Editor Unlocker, è necessario utilizzare cx_Freeze, un modulo Python che consente di creare pacchetti eseguibili a partire da script Python.
+
+Prima di tutto, è necessario installare cx_Freeze utilizzando pip. Puoi eseguire il seguente comando nel tuo terminale:
+
+```
+pip install cx_Freeze
+```
+
+Una volta installato cx_Freeze, puoi procedere con la creazione dell'eseguibile del programma.
+Esegui il seguente comando per creare l'eseguibile:
+
+```
+python compile.py build
+```
+
+Questo comando utilizzerà cx_Freeze per creare l'eseguibile del programma. L'eseguibile verrà creato nella directory `build` all'interno della directory corrente.
+
+Una volta completata la creazione dell'eseguibile, puoi eseguirlo semplicemente facendo doppio clic sul file `unlocker.exe`.
+
 # Screenshot
 
 ![SC2 Map Unlocker](https://github.com/nemmusu/sc2-map-unlocker/blob/main/screenshots/interface_example.png)
